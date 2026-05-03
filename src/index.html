@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="min-h-screen">
+    <nav class="bg-gray-800 px-6 py-4 flex flex-col md:flex-row items-center justify-between text-white gap-4">
+    
+    <!-- Hidden on mobile, visible on big screens -->
+    <h1 class="hidden md:block text-xl font-bold">Tailwind</h1>
+    
+    <!-- Styled UL: Centers links on mobile, row on desktop -->
+    <ul class="flex items-center justify-center gap-6 w-full md:w-auto border-b border-gray-700 pb-4 md:border-none md:pb-0">
+        <li><a href="#" class="text-gray-300 hover:text-white transition">home</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-white transition">about</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-white transition">contact</a></li>
+    </ul>
+
+    <!-- Styled Button: Full width on mobile, auto width on desktop -->
+    <button class="w-full md:w-auto bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-semibold shadow-md transition-all active:scale-95">
+        Get Started
+    </button>
+</nav>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center p-8 max-w-4xl justify-center mx-auto">
+    <section class="bg-blue-100 h-full rounded-2xl p-6 flex flex-col gap-4">
+    <!-- Image with no extra side padding -->
+    <img src="https://images.pexels.com/photos/20385205/pexels-photo-20385205.jpeg" 
+         alt="Headphones" 
+         class="w-full h-48 object-cover rounded-xl">
+
+    <!-- Content Wrapper with consistent alignment -->
+    <div class="flex flex-col gap-2">
+        <h2 class="text-xl font-semibold text-gray-800">Premium Headphones</h2>
+        <div class="text-xl font-bold text-blue-600">$199.99</div>
+        
+        <!-- Button: Removed mx-4 and added w-full to match the line -->
+        <button class="w-full bg-[#1d7cf2] hover:bg-blue-600 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2 transition-all mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            Add to Cart
+        </button>
+    </div>
+</section>
+
+    <section class="bg-blue-100 h-full rounded-2xl p-6 flex flex-col justify-center">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Login</h2>
+    
+    <form action="" class="flex flex-col gap-5">
+        <!-- Email Field -->
+        <label for="Email" class="flex flex-col gap-1.5">
+            <span class="text-sm font-semibold text-gray-700">Email</span>
+            <input type="email" id="Email" placeholder="you@example.com" 
+                class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+        </label>
+
+        <!-- Password Field -->
+        <label for="password" class="flex flex-col gap-1.5">
+            <div class="flex justify-between items-center">
+                <span class="text-sm font-semibold text-gray-700">Password</span>
+            </div>
+            <input type="password" id="password" placeholder="••••••••" 
+                class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+        </label>
+
+        <!-- Login Button -->
+        <button type="submit" 
+            class="w-full bg-[#1d7cf2] hover:bg-blue-600 text-white font-bold py-3 rounded-xl shadow-md transition-all active:scale-[0.98] mt-2">
+            Login
+        </button>
+
+        <!-- Footer Text -->
+        <p class="text-center text-sm text-gray-600 mt-2">
+            Don't have an account? 
+            <a href="#" class="text-blue-600 font-semibold hover:underline">Sign up</a>
+        </p>
+    </form>
+</section>
+
+    <!-- Success Section -->
+<section class="grid-rows-2 bg-blue-100 h-full flex items-center p-4 gap-3 rounded">
+    <!-- Yes (Checkmark) SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <p>Operation Completed</p>
+</section>
+
+<!-- Error Section -->
+<section class="grid-rows-2 bg-blue-100 h-full flex items-center p-4 gap-3 rounded">
+    <!-- No (X ) SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    <p>Something went wrong.</p>
+</section>
+
+</div>
+</body>
+</html>
